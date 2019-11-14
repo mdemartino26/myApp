@@ -1,0 +1,23 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+header{
+    overflow: hidden;
+    background-color: aliceblue;
+}
+ 
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+input:valid, textarea:valid {
+    background:green;
+  }
+  input:invalid, textarea:invalid {
+    background:red;
+  }
