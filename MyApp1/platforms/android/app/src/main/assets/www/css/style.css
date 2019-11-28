@@ -1,10 +1,11 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Helvetica Neue', sans-serif;
 }
 
 header{
     overflow: hidden;
-    background-color: aliceblue;
+    background-color: #af3d3d;
+    color: white;
 }
  
 h1 {
@@ -17,7 +18,35 @@ h2 {
 
 input:valid, textarea:valid {
     background:green;
+    opacity: 0.5;
   }
   input:invalid, textarea:invalid {
     background:red;
+    opacity: 0.5;
   }
+
+#ingreso {
+    text-align: center;
+}
+
+#usuarios {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#usu2 {
+    margin-left:2em;
+}
+
+#juegos {
+    text-align: center;
+}
+
+#juegos li {
+    list-style: none;
+}
+
+#juegos li a:link {
+    text-decoration: none;
+}

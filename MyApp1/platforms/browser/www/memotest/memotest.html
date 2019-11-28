@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memotest</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+    <meta charset="UTF-8">
+    <script src="./assets/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+
+    <div id="winDiv" class="dissapear"></div>
+    <div id="maincontainer">
+
+        <div id="alinear">
+            <select required class="select-css" id="selectSize" name="selectSize" onchange="drawBoard(this)">
+                <option value="" hidden>Seleccionar tablero</option>
+                <option value="4">4x4</option>
+                <option value="5">5x5</option>
+                <option value="6">6x6</option>
+            </select>
+            <h3 id="turn">Turno: </h3>
+            <button id="BotonReiniciar" onclick="restart()">Reiniciar</button>
+        </div>
+       <!-- <div id="flex-box">
+            <div id="jugador1" class="jugador">Jugador 1:
+                <p id="points_jug1">0</p>-->
+            </div>
+            <div class="container">
+            </div>
+            <!--<div id="jugador2" class="jugador"> Jugador 2:
+                <p id="points_jug2">0</p>
+            </div>-->
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="./assets/aplicacion.js"></script>
+    <!--<address>Creado por: Dieguillo, Marian, Sabri y Alva.</address>-->
+</body>
+
+</html>

@@ -19,21 +19,21 @@
 -->
 <html>
     <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <title>Mi aplicación</title>
+      <!--
+      Customize this policy to fit your own app's needs. For more guidance, see:
+          https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+      Some notes:
+          * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+          * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+          * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+              * Enable inline JS: add 'unsafe-inline' to default-src
+      -->
+      <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"-->
+      <meta name="format-detection" content="telephone=no">
+      <meta name="msapplication-tap-highlight" content="no">
+      <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <title>Umai-</title>
     </head>
     <body onload="checkUsuarios()">
 
@@ -50,12 +50,12 @@
             <h1>Usuarios</h1>
             <form method="post" action="send.php">
             <h3> Usuario 1 </h3>
-              <img alt="usuario" src="icons/user.svg" width=150" height="70">
+              <button id="photo" onclick="takePicture('myImage1')"> Sacar foto</button>
              <p> Nombre: <input type="text"  minlength="1" maxlength="50" placeholder="Nombre" id="nombretxt" required> </p>
              <p> Nickname: <input type="text" minlength="1" maxlength="50" placeholder="Nickname" id="nicktxt"  required> </p>
             
                 <h3> Usuario 2 </h3>
-                  <img alt="usuario" src="icons/user.svg" width=150" height="70">
+                  <button id="photo" onclick="takePicture('myImage2')"> Sacar foto</button>
                  <p> Nombre: <input type="text" minlength="1" maxlength="50" placeholder="Nombre" id="nombretxt2"  required> </p>
                  <p> Nickname: <input type="text" minlength="1" maxlength="50" placeholder="Nickname" id="nicktxt2"  required> </p>
                 <input type=button value=ingresar onclick="corroborar()">
@@ -79,6 +79,6 @@
            <footer>
           
         </footer>
-      <script src="js/javascript.js"></script>
+      <script src="javascript.js"></script>
     </body>
 </html>

@@ -3,6 +3,31 @@ var nicktxt = "";
 var nombretxt2 ="";
 var nicktxt2 = "";
 
+// document.addEventListener("deviceready", onDeviceReady, false);
+//     function onDeviceReady() {
+//         console.log(navigator.camera);
+//     }
+
+function takePicture(id) {
+
+    navigator.camera.getPicture(onSuccess, onFail, { quality: 25,
+        destinationType: Camera.DestinationType.DATA_URL,
+        correctOrientation: true,
+        targetHeight:100,
+        targetWidth:100
+    });
+    
+    function onSuccess(imageData) {
+        var image = document.getElementById(id);
+        image.src = "data:image/jpeg;base64," + imageData;
+    }
+    
+    function onFail(message) {
+        alert('Failed because: ' + message);
+    }
+}
+
+
 function corroborar(){
     nombretxt = document.getElementById("nombretxt").value;
     nicktxt = document.getElementById("nicktxt").value;
@@ -46,4 +71,5 @@ function checkUsuarios(){
     document.getElementById("juegos").style.display = "";
   }
 }
+
 
